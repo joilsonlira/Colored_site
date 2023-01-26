@@ -5,7 +5,7 @@
     text-decoration: none;
     list-style: none;
     color: initial;
-    font-family: sans-serif;   
+    font-family: Muli;   
 }
 
 :root{
@@ -16,13 +16,22 @@
 }
 
 body{
-    background-color: var(--bg-body);
+    background-color: #ccc;
 }
 
 #start{
     background-color: var(--bg-start);
 }
-
+#main_container{
+    max-width: 1440px;
+    margin: 64px auto;
+    background-color: var(--bg-body);
+    border-radius: 50px 50px 0 0;
+    overflow:hidden;
+}
+section{
+    padding: 0 64px;
+}
 .main_header, .box_start{
     display: flex;
     align-items: center;
@@ -33,7 +42,9 @@ body{
     height: var(--bg-height);
     width: 100%;
 }
-
+#logo h1{
+    font-family: Inter-extra-bold;
+}
 .box_start{
     padding: 5rem;
     justify-content: center;
@@ -41,11 +52,18 @@ body{
 .box_start img{
     width: 55%;
     height: auto;
+    margin-right: 70px;
+}
+.box_start .information{
+    padding: 0 24px;
+}
+.box_start .information h2{
+    font-size: 52px;
+    letter-spacing: 0.2px;
 }
 .information{
     display: flex;
     flex-direction: column;
-    margin-left: 140px;
 }
 .information h2{
     color: var(--color-h2);
@@ -65,21 +83,32 @@ body{
     height: auto;
     width: auto;
 }
-.information1{
+.information{
     display: flex;
     align-items: center;
     flex-direction: column;
 }
-.information1 p{
+.information p{
     display: flex;
     align-items: center;
     font-size: 16px;
-    margin-top: 150px;
+    margin-top: 118px;
 }
 .co-working{
     display: flex;
     align-items: center;
     flex-direction:row-reverse
+}
+.co-working .information p{
+    border-radius: 15px;
+    font-family: Muli-light;
+    font-weight: lighter;
+    padding: 1em;
+}
+.co-working .information p:hover{
+    background-color: #4F55DD;
+    color: white;
+    cursor: pointer;
 }
 .coments{
     display: flex;
