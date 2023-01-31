@@ -43,7 +43,36 @@ section{
     width: 100%;
 }
 #logo h1{
+    position: relative;
+    top: 51px;
     font-family: Inter-extra-bold;
+    font-size: 40px;
+    color: rgba(84, 15, 126, .7);
+}
+#main_menu{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 300px;
+    column-gap: 20px;
+}
+.loggin button{
+    padding: .8rem;
+    border: none;
+    border-radius: 6px;
+}
+
+.loggin button:nth-child(1){
+    background: #21CEC4;
+}
+.loggin button:nth-child(2){
+    background: #E08E8E;
+}
+.loggin button small{
+    font-size: 14px;
+    color: black;
+    filter: drop-shadow(rgba(165, 95, 95, .8) 0px 2px);
+    /* border:  solid 1px; */
 }
 .box_start{
     padding: 5rem;
@@ -61,11 +90,7 @@ section{
     font-size: 52px;
     letter-spacing: 0.2px;
 }
-.information{
-    display: flex;
-    flex-direction: column;
-}
-.information h2{
+/* .information h2{
     color: var(--color-h2);
     font-size: 52px;
 }
@@ -82,18 +107,19 @@ section{
     display: flex;
     height: auto;
     width: auto;
-}
-.information{
+} */
+/* .information{
     display: flex;
     align-items: center;
     flex-direction: column;
+
 }
 .information p{
     display: flex;
     align-items: center;
     font-size: 16px;
     margin-top: 118px;
-}
+} */
 .co-working{
     display: flex;
     align-items: center;
@@ -111,6 +137,68 @@ section{
     cursor: pointer;
 }
 .coments{
-    display: flex;
     align-items: center;
-}   
+    padding-right: 0;
+}
+.coments header{
+    display: flex;
+    column-gap: 300px;
+    justify-content: center;
+    align-items: center;
+    background-color: #32E8BC;
+    width: 1380px;
+    padding: 3rem;
+}
+.coments header h1{
+    width: 50%;
+    font-size: 3em;
+    color: #4F4F4F;
+}
+.coments .photo{
+    position: relative;
+    grid-area: imagem;
+    height: auto;
+    width: 500px;
+}
+.coments .photo img{
+    width: 100%;
+    height: auto;
+    position: absolute;
+    width: 41vw;
+    top: -374px;
+    left: -159px;
+}
+.coments .information{
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-areas:
+        'texto_left imagem texto_right';
+}
+.coments .information .photo{
+    grid-area: 'imagem';
+}
+.coments .information p{
+    background-color: #B4FFED;
+    height: 96px;
+    width: 400px;
+    border-radius: 25px 0px;
+    padding: 1rem;
+}
+.texto_rigth, .texto_left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 62px;
+    margin-top: 91px;
+}
+.texto_left{
+    grid-area: 'texto_left';
+}
+.texto_middle_botton{
+    display: flex;
+    justify-content: center;
+    margin-top: 82%;
+}
+.texto_rigth{
+    grid-area: 'texto_right';
+}
